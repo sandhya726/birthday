@@ -21,22 +21,37 @@ display: flex;
 margin-bottom:20px;
 }
 .first img{
-margin-bottom:20px;
+width:260px;
+height:260px;
+border-radius: 50%;
+  border: 5px solid pink;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
+.first button {
+  background: hotpink;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 25px;
+}
+
+.first button:hover {
+  background: deeppink;
+  }
 .title {
   font-size: 36px;
   font-weight: bold;
   color: gold;
   animation: glow 1s infinite alternate;
 }
-
-/* Glow Effect */
 @keyframes glow {
   from {
     text-shadow: 0 0 5px orange;
   }
   to {
-    text-shadow: 0 0 20px yellow;
+    text-shadow: 0 0 20px blue;
   }
 }
 }
@@ -44,7 +59,7 @@ margin-bottom:20px;
 <body>
 <div class="first">
  <p class="title">HAPPY BIRTHDAY TO MY 🧿🎀!!!</P>
- <img src="boi.jpeg" style="width:220px; height:auto;" alt="shit !image is loading....">
+ <img src="boi.jpeg"  alt="shit !image is loading....">
 <button onclick="location.href='cake.html'">
   Let's go...
 </button>
