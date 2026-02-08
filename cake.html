@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>cake</title>
+<style>
+ body{
+ display:flex;
+ justify-content:center;
+ text-align:center;
+ height:100vh;
+align-items:center;
+ flex-direction:column;
+ background-color:pink;
+ }
+ .cake-container{
+  position:relative;
+height:300px;
+width:300px;
+}
+.candle{
+width:10px;
+height:60px;
+background:white;
+position:absolute;
+bottom:210px;
+transform:translateX(-50%);
+border-radius:5px;
+}
+.flames{
+width:10px;
+height:20px;
+position:absolute;
+background:orange;
+border-radius:50px;
+top:-20px;
+left:50%;
+transform:translateX(-50%);
+animation: cake 0.5s infinite;
+}
+.cake-img{
+width:300px;
+height:300px;
+border-radius:5%;
+object-fit:cover;
+}
+.con{
+ position: absolute;
+ top: -20px;
+ animation-name: fall;
+ animation-timing-function: linear;
+ animation-fill-mode: forwards;
+}
+@keyframes fall{
+ to{
+   transform:translateY(110vh) rotate(360deg);
+   opacity:0;
+ }
+}
+
+@keyframes cake {
+0%{transform :translateX(-50%)scale(1);}
+50%{transform :translateX(-50%) scale(1.5);}
+100%{transform :translateX(-50%) scale(1);}
+}
+</style>
+</head>
+<body>
+  <h1> yappy yappy birthdayyluuuuuuuuuuu!!!!!!!!</h1>
+  <div class="cake-container" onclick="blow()">
+  <img src="cake.png"  alt="shit cake image is still loading..........." class="cake-img">
+ <div class="candle" style="left:20%"><div class="flames"></div></div>
+<div class="candle" style="left:35%"><div class="flames"></div></div>
+<div class="candle"style="left:50%"><div class="flames"></div></div>
+<div class="candle"style="left:65%"><div class="flames"></div></div>
+<div class="candle"style="left:80%"><div class="flames"></div></div>
+</div>
+<h4><P>
+blow the candles broooo!!!!!!!!</p></h4>
+<script>
+function blow()
+{
+let flames=document.querySelectorAll(".flames");
+flames.forEach(flame=>{flame.style.display="none";});
+for(let i=0;i<=1000;i++)
+{
+ createconfetti();
+}
+}
+function createconfetti()
+{
+let con=document.createElement("div");
+con.classList.add("con");
+let colors=["red","green","orange","blue","purple","yellow"];
+con.style.background=colors[Math.floor(Math.random()*colors.length)];
+con.style.left=Math.random()*100+"vw";
+con.style.width=5+Math.random()*6+"px";
+con.style.height=8+Math.random()*10+"px";
+let duration = 2 + Math.random() * 3;
+  con.style.animationDuration = duration + "s";
+
+    let delay = Math.random();
+  con.style.animationDelay = delay + "s";
+
+   let rotate = Math.random() * 360;
+  con.style.transform = `rotate(${rotate}deg)`;
+document.body.appendChild(con);
+setTimeout(()=>{
+    con.remove();
+  },6000);
+}
+</script>
+</body>
+</html>
