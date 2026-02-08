@@ -23,11 +23,27 @@ margin-bottom:20px;
 .first img{
 margin-bottom:20px;
 }
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: gold;
+  animation: glow 1s infinite alternate;
+}
+
+/* Glow Effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px orange;
+  }
+  to {
+    text-shadow: 0 0 20px yellow;
+  }
+}
 }
 </style>
 <body>
 <div class="first">
- <p style="color:blue">HAPPY BIRTHDAY TO MY !!!</P>
+ <p class="title">HAPPY BIRTHDAY TO MY 🧿🎀!!!</P>
  <img src="boi.jpeg" style="width:220px; height:auto;" alt="shit !image is loading....">
 <button onclick="location.href='cake.html'">
   Let's go...
