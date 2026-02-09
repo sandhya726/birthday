@@ -93,10 +93,31 @@ button{
 function yesclick()
 {
  alert("tnxs💙");
- for(let i=0;i<=80;i++)
-{
 createheart();
 createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+createheart();
+createpaper();
+
+
+ for(let i=10;i<80;i++)
+{
+setTimeout(()=>{createheart();
+createpaper();
+},i*240);
 }
 }
 function noclick()
@@ -109,22 +130,23 @@ let hear=document.createElement("div");
 hear.classList.add("hear");
 hear.innerHTML="💗";
 hear.style.left=Math.random()*100+"vw";
-hear.style.animationDuration=2+Math.random()*3+"s";
+hear.style.animationDuration=3+Math.random()*3+"s";
 document.body.appendChild(hear);
-setTimeout(()=>{hear.remove();},5000);}
-function createpaper(){
+setTimeout(()=>{hear.remove();},20000);}
+function createpaper()
+{
 
   let paper = document.createElement("div");
   paper.classList.add("paper");
 
   paper.style.left = Math.random()*100 + "vw";
-  paper.style.animationDuration = 2 + Math.random()*3 + "s";
+  paper.style.animationDuration = 3 + Math.random()*3 + "s";
 
   document.body.appendChild(paper);
 
   setTimeout(()=>{
     paper.remove();
-  },5000);
+  },20000);
 }
 </script>
 </body>
