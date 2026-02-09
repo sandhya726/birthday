@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>
+message</title>
+</head>
+<style>
+body{
+margin:0;
+width:100vw;
+text-align:center;
+position:relative;
+display:flex;
+justify-content:flex-start;
+background:lightblue;
+overflow:hidden;
+font-family:arial,sans-serif;
+flex-direction:column;
+align-items:center;
+padding-top:10px;
+}
+button{
+  margin-top:15px;
+  padding:8px 20px;
+  background:gold;
+  border:none;
+  border-radius:5px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.message{
+ position:relative;
+    background:lightblue;
+    border: 2px solid gold;
+    padding: 15px 20px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    backdrop-filter:blur(5px);
+    box-shadow: 0 0 20px gold;
+    margin:10px auto;
+    max-width:90%;
+  }
+.message p{
+  font-size:16px;
+  line-height:1.4;
+  color:#333;
+  text-align:center;
+margin:0;
+padding:0;
+
+}
+
+
+.confetti{
+position:absolute;
+height:15px;
+width:9px;
+top:-20px;
+background:gold;
+opacity:0.9;
+animation:fall linear infinite;
+}
+@keyframes fall{
+ from{transform:translateY(0) rotate(0deg);
+ }
+to{transform:translateY(100vh) rotate(360deg);
+ }
+}
+</style>
+ <body>
+<h1 style="color:purple; margin-bottom:15px;"> to my cutiee!!!!!!</h1>
+<div class="message">
+ 
+ <p>
+  Since the day I saw your reel on someone’s story, I started falling for you.<br><br>
+
+  At first, I thought you were just another netranandham for me…  
+  but later !!!!!!!!!!!.<br><br>
+
+  When I received your message, it was a surprise for me.  
+  I was confused whether I should reply or not, but I did…  
+  because I think you already knew the reason.<br><br>
+
+  I don’t know if you love me or even like me,  
+  but I better, you can't even imagine  
+  how much I crave for you and love you, Bakkiii ❤️<br><br>
+
+  I only wish you success in your life  
+  and happiness with the girl who will come into your life.  
+  And I wish that girl could be me…<br><br>
+
+  I respect your decision, whatever it may be.<br><br>
+
+  Happy Birthday, my boiii 💙  
+  Puttina Roju Shubhakankshalu 🎉
+  </p>
+<button onclick="location.href='photo.html'">
+  keep going cutieee...
+</button>
+
+</div>
+<script>
+function createconfetti()
+{
+let confetti=document.createElement("div");
+confetti.classList.add("confetti");
+let colors=["gold","#ffd700","#ffec8b"];
+confetti.style.background=colors[Math.floor(Math.random()*colors.length)];
+confetti.style.left = Math.random() *100 + "vw";
+let size=6+Math.random()*6;
+confetti.style.width=size+"px";
+confetti.style.height=size+"px";
+let orientation=3+Math.random()*3;
+confetti.style.animationDuration=orientation+"s";
+document.body.appendChild(confetti);
+setTimeout(()=>{
+confetti.remove();
+},5000);
+}
+setInterval(createconfetti,40);
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+
+<html>
+<head>
+<title>For You 💙</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:lightblue;
+  font-family:arial,sans-serif;
+  flex-direction:column;
+}
+.box{
+  background:white;
+  padding:25px 30px;
+  border-radius:15px;
+  width:320px;
+  box-shadow:0 0 15px pink;
+}
+
+.box p{
+  font-size:16px;
+  line-height:1.5;
+  color:#333;
+}
+
+img{
+  max-width:80%;
+  border-radius:15px;
+  box-shadow:0 0 20px gold;
+}
+
+h2{
+  color:purple;
+ }
+button{
+  margin:10px;
+  padding:8px 18px;
+  border:none;
+  border-radius:5px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.yes{
+  background:pink;
+}
+
+.no{
+  background:lightgray;
+}
+
+.hear{
+  position:absolute;
+  top:-20px;
+  font-size:22px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh);
+    opacity:0;
+  }
+}
+
+.paper{
+  position:absolute;
+  top:-20px;
+  width:8px;
+  height:12px;
+  background:gold;
+  opacity:0.8;
+  animation:fall linear infinite;
+}
+</style>
+
+</head>
+
+<body>
+<div class="box" id="box">
+<h2>from sandaaaaaa🫶</h2>
+<img src="boii.jpeg">
+<p>can i be yours ?</p>
+<button class="yes" onclick="yesclick()">Yes 💗</button>
+<button class="no" onclick="noclick()">No </button>
+</div>
+<script>
+function yesclick()
+{
+ alert("tnxs💙");
+ for(let i=0;i<=80;i++)
+{
+createheart();
+createpaper();
+}
+}
+function noclick()
+{
+ alert("it's okk broooo💗💗💗. you will be my netranandham always.");
+ }
+function createheart()
+{
+let hear=document.createElement("div");
+hear.classList.add("hear");
+hear.innerHTML="💗";
+hear.style.left=Math.random()*100+"vw";
+hear.style.animationDuration=2+Math.random()*3+"s";
+document.body.appendChild(hear);
+setTimeout(()=>{hear.remove();},5000);}
+function createpaper(){
+
+  let paper = document.createElement("div");
+  paper.classList.add("paper");
+
+  paper.style.left = Math.random()*100 + "vw";
+  paper.style.animationDuration = 2 + Math.random()*3 + "s";
+
+  document.body.appendChild(paper);
+
+  setTimeout(()=>{
+    paper.remove();
+  },5000);
+}
+</script>
+</body>
+</html>
