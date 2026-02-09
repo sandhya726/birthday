@@ -93,32 +93,14 @@ button{
 function yesclick()
 {
  alert("tnxs💙");
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
-createheart();
-createpaper();
+function fallLoop() {
+    createheart();
+    createpaper();
 
+    setTimeout(fallLoop, 300); 
+  }
 
- for(let i=10;i<80;i++)
-{
-setTimeout(()=>{createheart();
-createpaper();
-},i*240);
-}
+  fallLoop(); 
 }
 function noclick()
 {
@@ -151,3 +133,4 @@ function createpaper()
 </script>
 </body>
 </html>
+
