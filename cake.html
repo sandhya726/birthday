@@ -10,6 +10,7 @@
 align-items:center;
  flex-direction:column;
  background-color:pink;
+  overflow:hidden;
  }
  .cake-container{
   position:relative;
@@ -45,11 +46,17 @@ object-fit:cover;
 .con{
  position: absolute;
  top: -20px;
+ width:20px;
+  hight:20px;
  animation-name: fall;
  animation-timing-function: linear;
  animation-fill-mode: forwards;
 }
 @keyframes fall{
+ from{
+    transform: translateY(0) rotate(0deg);
+    opacity:1;
+ }
  to{
    transform:translateY(110vh) rotate(360deg);
    opacity:0;
@@ -74,7 +81,7 @@ object-fit:cover;
 <div class="candle"style="left:80%"><div class="flames"></div></div>
 </div>
 <h4><P>
-blow the candles broooo!!!!!!!!</p></h4>
+blow the candles  cutieeeee!!!!!!!!</p></h4>
 <button onclick="location.href='message.html'">
   keep going cutieee...
 </button>
@@ -111,6 +118,8 @@ setTimeout(()=>{
     con.remove();
   },6000);
 }
+ setInterval(createconfetti,200);
 </script>
 </body>
+
 </html>
